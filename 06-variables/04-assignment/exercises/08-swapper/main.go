@@ -25,7 +25,12 @@ package main
 func main() {
 	// UNCOMMENT THE CODE BELOW:
 
-	// color, color2 := "red", "blue"
-
-	// ?
+	color, color2 := "red", "blue"
+	
+	// Swap values
+	color, color2 = color2, color
+	
+	// Print
+	fmt.Println("color : ", color)
+	fmt.Println("color2 : ", color2)
 }
