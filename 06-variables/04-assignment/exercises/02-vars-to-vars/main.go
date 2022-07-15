@@ -46,5 +46,5 @@ func main() {
 
 	// UNCOMMENT THE CODE BELOW TO PRINT THE VARIABLE
 
-	// fmt.Println(color)
+	fmt.Println(color)
 }
