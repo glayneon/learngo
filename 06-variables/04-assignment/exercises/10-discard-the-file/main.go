@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Discard The File
 //
@@ -25,5 +30,6 @@ package main
 func main() {
 	// UNCOMMENT THE CODE BELOW:
 
-	// ? ?= path.Split("secret/file.txt")
+	d, _ := path.Split("secret/file.txt")
+	fmt.Println(d)
 }
