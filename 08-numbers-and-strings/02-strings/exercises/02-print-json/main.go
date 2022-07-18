@@ -40,5 +40,15 @@ func main() {
 		"\t}]\n" +
 		"}\n"
 
-	fmt.Println(json)
+	// raw literal string
+	js2 := `
+{
+	"Items": [{
+		"Item": {
+			"name": "Teddy Bear"
+		}
+	}]
+}`
+
+	fmt.Println(js2)
 }
