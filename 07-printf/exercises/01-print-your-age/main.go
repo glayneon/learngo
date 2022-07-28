@@ -8,6 +8,10 @@
 
 package main
 
+import (
+	"fmt"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Print Your Age
 //
@@ -21,5 +25,13 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// ?
+	// Let's get started.
+	// declaration for const
+	const (
+		p = "I'm %d years old.\n"
+	)
+	
+	age := 45
+
+	fmt.Printf(p, age)
 }
