@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Print the Type #2
 //
@@ -18,5 +20,12 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// ?
+	// Let's get started.
+	const fm1 = "Type of %v is %T\n"
+	
+	// Declare variables
+	pi := 3.14
+	// Print
+	fmt.Printf(fm1, pi, pi)
+	
 }
