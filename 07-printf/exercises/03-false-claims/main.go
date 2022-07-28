@@ -8,6 +8,8 @@
 
 package main
 
+imoprt "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: False Claims
 //
@@ -20,8 +22,9 @@ package main
 func main() {
 	// UNCOMMENT THE FOLLOWING CODE
 	// AND DO NOT CHANGE IT AFTERWARDS
-	// tf := false
+	tf := false
 
+	const p = "These are %t claims.\n"
 	// TYPE YOUR CODE HERE
-	// ?
+	fmt.Printf(p, tf)
 }
