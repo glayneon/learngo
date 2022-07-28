@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Print the Type #4
 //  Print the type and value of true using fmt.Printf
@@ -17,5 +19,9 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// ?
+	const fm1 = "Type of %v is %[1]T\n"
+	
+	tf := true
+	
+	fmt.Printf(fm1, tf)
 }
