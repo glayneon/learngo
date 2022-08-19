@@ -45,8 +45,15 @@ func main() {
 	}
 
 	arg := os.Args[1]
+        
+	feet, err := strconv.ParseFloat(arg, 64)
 
-	feet, _ := strconv.ParseFloat(arg, 64)
+	// error handler
+	if err != nil {
+		fmt.Printf("error: %q is not a number." feet)
+		return
+	}
+	
 	meters := feet * 0.3048
 
 	fmt.Printf("%g feet is %g meters.\n", feet, meters)
