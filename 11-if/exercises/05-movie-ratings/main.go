@@ -53,4 +53,24 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+  const (
+    r = "R-Rated"
+    pg = "PG-13"
+    pgr = "PG-Rated"
+    err1 = "Requires age"
+    err2 = "Wrong age: "-5"
+  )
+    
+  if a := os.Args; len(a) != 2 {
+    fmt.Println("Requires age.\n")
+  } else if g, err := strconv.Atoi(a[1]); err != nil || g < 0 {
+    fmt.Printf("Wrong age: %q\n", a[1])
+  } else {
+    if g > 17 {
+      fmt.Println(r)
+    } else if g >= 13 {
+      fmt.Println(pg)
+    } else {
+      fmt.Println(pgp)
+    }
 }
