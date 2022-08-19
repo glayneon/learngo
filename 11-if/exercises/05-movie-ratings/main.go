@@ -58,13 +58,13 @@ func main() {
     pg = "PG-13"
     pgr = "PG-Rated"
     err1 = "Requires age"
-    err2 = "Wrong age: "-5"
+    err2 = "Wrong age: %q\n"
   )
     
   if a := os.Args; len(a) != 2 {
     fmt.Println("Requires age.\n")
   } else if g, err := strconv.Atoi(a[1]); err != nil || g < 0 {
-    fmt.Printf("Wrong age: %q\n", a[1])
+    fmt.Printf(err2, a[1])
   } else {
     if g > 17 {
       fmt.Println(r)
