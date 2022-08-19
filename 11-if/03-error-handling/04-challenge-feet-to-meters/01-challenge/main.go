@@ -50,7 +50,7 @@ func main() {
 
 	// error handler
 	if err != nil {
-		fmt.Printf("error: %q is not a number." feet)
+		fmt.Printf("error: %q is not a number." arg)
 		return
 	}
 	
