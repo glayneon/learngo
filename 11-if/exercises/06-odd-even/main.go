@@ -1,12 +1,11 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
 
 package main
+
+import (
+  "fmt"
+  "os"
+  "strconv"
+)
 
 // ---------------------------------------------------------
 // EXERCISE: Odd or Even
@@ -36,5 +35,13 @@ package main
 //    "ABC" is not a number
 // ---------------------------------------------------------
 
+const (
+  divider = 8
+  p = "%d is an %s number\n"
+  err1 = "Pick a number\n"
+  err2 = "%q is not a number\n"
+)
+
 func main() {
+  a = os
 }
