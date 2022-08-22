@@ -1,12 +1,10 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
+
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
 
 // ---------------------------------------------------------
 // EXERCISE: Leap Year
@@ -36,5 +34,24 @@ package main
 //    2024 is a leap year.
 // ---------------------------------------------------------
 
+// constant
+const (
+	err1 = "Give me a year number\n"
+	err2 = "%q is not a valid year.\n"
+	pr1  = "%d is not a leap year.\n"
+	pr2  = "%d is a leap year.\n"
+)
+
 func main() {
+	if a := os.Args; len(a) != 2 {
+		fmt.Printf(err1)
+	} else if n, err := strconv.Atoi(a[1]); err != nil {
+		fmt.Printf(err2, a[1])
+	} else {
+		if n%4 == 0 {
+			fmt.Printf(pr2, n)
+		} else {
+			fmt.Printf(pr1, n)
+		}
+	}
 }
