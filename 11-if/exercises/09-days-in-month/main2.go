@@ -17,15 +17,15 @@ func main() {
 
     // get this year and check whether leap year or not
     year := time.Now().Year()
-    leap := year%4 == 0 && ( year % 100 != 0 || year % 400 != 0)
-    month := strings.ToLower(a.Args[1])
+    leap := year%4 == 0 && ( year%100 != 0 || year%400 != 0)
+    month := strings.ToLower(os.Args[1])
     
     // check the month
     if m := month; m == "april" ||
             m == "june" ||
             m == "september" ||
             m == "november" {
-        day = 30
+            day = 30
     } else if m == "january" || 
             m == "march" ||
             m == "may" ||
@@ -33,19 +33,18 @@ func main() {
             m == "august" ||
             m == "october" ||
             m == "decem ber" {
-        day = 31
+            day = 31
     } else if m == "febrary" {
-          if leap {
-              day = 29
-          } else {
-              day = 28
-          }
+        if leap {
+            day = 29
+        } else {
+            day = 28
+        }
     } else {
-          fmt.Printf("%q is not a month.\n")
-          return
+        fmt.Printf("%q is not a month.\n")
+        return
     }
-    
+
     fmt.Printf("%q has %d days.\n", month, day)
-    
 }
     
