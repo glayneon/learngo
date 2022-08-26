@@ -1,18 +1,9 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
 
 import (
 	"fmt"
 	"os"
 )
-
 // ---------------------------------------------------------
 // EXERCISE: Convert
 //
@@ -41,13 +32,16 @@ func main() {
 	//
 	// REFACTOR THIS TO A SWITCH
 	//
-	if u != user && u != user2 {
-		fmt.Printf(errUser, u)
-	} else if u == user && p == pass {
+	switch {
+	case u == user && p == pass:
 		fmt.Printf(accessOK, u)
-	} else if u == user2 && p == pass2 {
+	case u == user2 && p == pass2:
 		fmt.Printf(accessOK, u)
-	} else {
+	case u == user && p != pass:
 		fmt.Printf(errPwd, u)
+	case u == user2 && p != pass2:
+		fmt.Printf(errPwd, u)
+	default:
+		fmt.Printf(errUser, u)
 	}
 }
