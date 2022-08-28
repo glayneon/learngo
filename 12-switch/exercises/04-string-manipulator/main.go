@@ -28,7 +28,7 @@ func main() {
   case "upper":
     v2 := strings.ToUpper(v)
   case "title":
-    v2 := strings.ToTitle(v)
+    v2 := strings.Title(v)
   default:
     v2 := "Unknown command: " + v
   }
