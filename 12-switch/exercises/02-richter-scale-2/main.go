@@ -27,7 +27,7 @@ func main() {
     return
   }
   
-  switch n := strings.ToLower(os.Args[1]); {
+  switch n := strings.ToLower(os.Args[1]); n {
   case "micro":
     fmt.Printf(pr1, n, micro)
   case "very minor":
