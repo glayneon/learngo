@@ -21,7 +21,7 @@ func main() {
   }
   
   // check it could be converted to integer
-  if t := strconv.Atoi(os.Args); t != nil {
+  if t := strconv.Atoi(os.Args[1]); t != nil || t < 0 {
     fmt.Printf(err1)
   } else {
     // Print Headers
