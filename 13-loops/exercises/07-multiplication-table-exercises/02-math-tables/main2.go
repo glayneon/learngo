@@ -68,6 +68,26 @@ func main() {
     
     // Print metrix
     for i := 0; i <= size; i++ {
-    }
-            
+        for j := 0; j <= size; j++ {
+            res := 0
+            switch op {
+            case "*":
+                res = i * j
+            case "/":
+                if j != 0 {
+                    res = i / j
+                }
+            case "%":
+                if j != 0 {
+                    res = i % j
+                }
+            case "+":
+                res = i + j
+            case "-":
+                res = i - j
+            }
+            fmt.Printf(fmt2, res)
+        }
+        fmt.Println()
+    }       
 }
