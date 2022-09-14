@@ -56,9 +56,10 @@ func main() {
         
         if i < max && i % even == 0 {
             fmt.Print(" + ")
+            sum += i
         }
         
-        sum += i
+        // sum += i
     }
     
     fmt.Printf(" = %d", sum)
