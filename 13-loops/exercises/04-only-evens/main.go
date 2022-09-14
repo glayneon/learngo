@@ -52,15 +52,15 @@ func main() {
     
     var sum int
     for i := min; i < max; i++ {
-        fmt.Print(i)
+        // fmt.Print(i)
         
-        if i < max && i % even == 0 {
-            fmt.Print(" + ")
+        if i % even == 0 {
+            fmt.Print(i)
+            if i < max {
+                fmt.Print(" + ")
+            }
             sum += i
         }
-        
-        // sum += i
-    }
-    
+    }    
     fmt.Printf(" = %d", sum)
 }
