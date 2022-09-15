@@ -51,7 +51,7 @@ func main() {
     }
     
     var sum int
-    for i := min; i < max; i++ {
+    for i := min; i <= max; i++ {
         // fmt.Print(i)
         
         if i % even == 0 {
