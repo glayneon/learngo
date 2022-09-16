@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-    const fmt = "\r%s "
+    const fmt = "\r%q "
     const lc = "\/|-"
     const dur = 250
     const msg = "Please Wait. Processing....\n"
