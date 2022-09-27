@@ -1,30 +1,55 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
 
-// ---------------------------------------------------------
-// EXERCISE: Verbose Mode
-//
-//  When the player runs the game like this:
-//
-//    go run main.go -v 4
-//
-//  Display each generated random number:
+import (
+    "fmt"
+    "time"
+    "math/rand"
+    "os"
+    "strconv"
+)
 
-//    1 3 4 🎉  YOU WIN!
-//
-//  In this example, computer picks 1, 3, and 4. And the
-//  player wins.
-//
-// HINT
-//  You need to get and interpret the command-line arguments.
-// ---------------------------------------------------------
+const (
+    usgage = `Welcome to the Lucky Number Game! 🍀
+
+The program will pick %d random numbers.
+Your mission is to guess one of those numbers.
+
+The greater your number is, harder it gets.
+Wanna play?
+`
+    em1 = `
+    wrong number. %q
+`
+    maxTurn = 10
+)
 
 func main() {
+    args := os.Args[1:]
+    rand.Seed(time.Now().UnixNano())
+        
+    if len(args) != 2 {
+        fmt.Printf(usage, maxTurn)
+        return
+    }
+    
+    guess, err := strconv.Atoi(args[1])
+    if err != nil || guess < 0 {
+        fmt.Printf(em1, args[1])
+        return
+    }
+    
+    if args[0] != "-v" 
+    
+    for turn := 1; turn < maxTurn; turn++ {
+        n := rand.Intn(guess + 1)
+        
+        if n == guess {
+            if turn == 1 {
+                fmt.Println("Wow, In first turn, ")
+            }
+            fmt.Println("You Win!")
+            return
+        }
+    }
+    fmt.Println("You Lost... Try again?")
 }
