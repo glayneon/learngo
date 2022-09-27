@@ -27,21 +27,26 @@ func main() {
     args := os.Args[1:]
     rand.Seed(time.Now().UnixNano())
         
-    if len(args) != 2 {
+    if len(args) < 1 {
         fmt.Printf(usage, maxTurn)
         return
     }
     
-    guess, err := strconv.Atoi(args[1])
+    if args[0] == '-v' {
+        verbose := true
+    }
+    
+    guess, err := strconv.Atoi(args[len(args)-1])
     if err != nil || guess < 0 {
         fmt.Printf(em1, args[1])
         return
     }
     
-    if args[0] != "-v" 
-    
     for turn := 1; turn < maxTurn; turn++ {
         n := rand.Intn(guess + 1)
+        if verbose == true {
+            fmt.Printf("3%d" n)
+        }
         
         if n == guess {
             if turn == 1 {
