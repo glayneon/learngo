@@ -9,8 +9,13 @@ import (
 )
 
 const (
-    usgage = `
-    randguess [number]
+    usgage = `Welcome to the Lucky Number Game! 🍀
+
+The program will pick %d random numbers.
+Your mission is to guess one of those numbers.
+
+The greater your number is, harder it gets.
+Wanna play?
 `
     em1 = `
     wrong number. %q
@@ -23,7 +28,7 @@ func main() {
     rand.Seed(time.Now().UnixNano())
         
     if len(args) != 1 {
-        fmt.Printf(usage)
+        fmt.Printf(usage, maxTurn)
         return
     }
     
@@ -33,7 +38,7 @@ func main() {
         return
     }
     
-    for turn := 0; turn < maxTurn; turn++ {
+    for turn := 1; turn < maxTurn; turn++ {
         n := rand.Intn(guess + 1)
         
         switch {
