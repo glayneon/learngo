@@ -1,37 +1,37 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
 
-// ---------------------------------------------------------
-// EXERCISE: Crunch the primes
-//
-//  1. Get numbers from the command-line.
-//  2. `for range` over them.
-//  4. Convert each one to an int.
-//  5. If one of the numbers isn't an int, just skip it.
-//  6. Print the ones that are only the prime numbers.
-//
-// RESTRICTION
-//  The user can run the program with any number of
-//  arguments.
-//
-// HINT
-//  Find whether a number is prime using this algorithm:
-//  https://stackoverflow.com/a/1801446/115363
-//
-// EXPECTED OUTPUT
-//  go run main.go 2 4 6 7 a 9 c 11 x 12 13
-//    2 7 11 13
-//
-//  go run main.go 1 2 3 5 7 A B C
-//    2 3 5 7
-// ---------------------------------------------------------
+import (
+    "fmt"
+    "os"
+    "strconv"
+)
+
+var primcount int = 0
+
+func primeFunc(primNum int) int {
+    for i := 2; i< primNum/2, i++ {
+        if primeNum%i == 0 {
+            primcount++
+        }
+    }
+    return primecount
+}
 
 func main() {
+    nums := os.Args[1:]
+  
+    search:
+    for _, n := range nums {
+        if n, err := strconv.Atoi(n); err != nil {
+            continue search
+        }
+        
+        // check prime number
+        primcount = primeFunc(n)
+        
+        if primcount == 0 && n != 1 {
+            fmt.Printf("%-3d", n)
+        }
+    }
 }
+        
