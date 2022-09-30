@@ -14,7 +14,7 @@ func primeFunc(primNum int) int {
             primcount++
         }
     }
-    return primecount
+    return primcount
 }
 
 func main() {
