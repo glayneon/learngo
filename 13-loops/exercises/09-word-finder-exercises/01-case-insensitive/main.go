@@ -23,7 +23,7 @@ queries:
                 break search
             }
             
-            if q == v {
+            if strings.ToLower(q) == v {
                 fmt.Printf("#%-2d: %q\n", i+1, v)
                 continue queries
             }
