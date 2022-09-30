@@ -15,15 +15,16 @@ func main() {
 // label
 queries:
     for _, q range args {
+        q = strings.ToLower(q)
         
     search:
         for i, v range word {
-            switch v {
+            switch q {
             case "and", "or", "the":
                 break search
             }
             
-            if strings.ToLower(q) == v {
+            if q == v {
                 fmt.Printf("#%-2d: %q\n", i+1, v)
                 continue queries
             }
