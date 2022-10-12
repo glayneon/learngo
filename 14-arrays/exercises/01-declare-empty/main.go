@@ -26,5 +26,21 @@ func main() {
     )
     
     ratios := [2]float32{
+        1,
+        +0.41,
+    }
+    alives := [3]string{
+        "up",
+        "up",
+        "down",
+    }
+    
+    var zero [0]byte
+    
+    for _, v := range(names) {
+        fmt.Printf("%q")
+    }
+    
+    
         
 }
