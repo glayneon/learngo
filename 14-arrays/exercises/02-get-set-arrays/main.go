@@ -49,5 +49,7 @@ func main() {
         fmt.Printf("%v", i)
     }
     
-    
+	for _, v := range(distances) {
+		fmt.Printf("%v\n", v)
+	}
 }
