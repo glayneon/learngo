@@ -45,8 +45,8 @@ func main() {
     zero[0] = "T"
     
     // print names array
-    for i = 0; i < len(names)+1 ; i++ {
-        fmt.Printf("%v", i)
+    for i = 0; i < len(names) ; i++ {
+        fmt.Printf("%v", names[i])
     }
     
 	for _, v := range(distances) {
