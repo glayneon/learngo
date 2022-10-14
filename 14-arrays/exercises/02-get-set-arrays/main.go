@@ -11,5 +11,5 @@ func main() {
 		alives    [4]bool    // Up/Down status of four different web servers
 		zero      [0]byte    // A byte array that doesn't occupy memory space
 	)
-    
+
 }
