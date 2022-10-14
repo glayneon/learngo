@@ -46,10 +46,31 @@ func main() {
     
     // print names array
     for i = 0; i < len(names) ; i++ {
-        fmt.Printf("%v", names[i])
+		fmt.Printf("names[%v]: %v\n", i, names[i])
     }
-    
-	for _, v := range(distances) {
-		fmt.Printf("%v\n", v)
+	
+	for i = 0; i < len(distances); i++ {
+		fmt.Printf("distance[%v]: %v\n", i, distances[i])
+	}
+	
+	for i = 0; i < len(data); i++ {
+		fmt.Printf("data[%v]: %v\n", i, data[i])
+	}
+	
+	for i = 0; i < len(ratios); i++ {
+		fmt.Printf("ratios[%v]: %v\n", i, ratios[i])
+	}
+	
+	for i = 0; i < len(alives); i++ {
+		fmt.Printf("alives[%v]: %v\n", i, alives[i])
+	}
+	
+	// for range
+	for i, v := range(names) {
+		fmt.Printf("names[%v]: %v\n", i, v)
+	}
+	
+	for i, v := range(distances) {
+		fmt.Printf("distances[%v]: %v\n", i, v)
 	}
 }
