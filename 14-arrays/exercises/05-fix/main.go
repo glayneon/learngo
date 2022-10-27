@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	names := [3]string{
+	names := [...]string{
 		"Einstein",
 		"Shepard",
 	 	"Tesla",
