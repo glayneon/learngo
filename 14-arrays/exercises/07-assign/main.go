@@ -22,10 +22,6 @@ func main() {
 	// initiate upper
 	for i, _ := range books {
 		upper[i] = strings.ToUpper(books[i])
-	}
-
-	// initiate lower
-	for i, _ := range books {
 		lower[i] = strings.ToLower(books[i])
 	}
 
