@@ -21,12 +21,12 @@ func main() {
     sep := "\n" + strings.Repeat("~", 30) + "\n"
     
     // initiate upper
-    for i, v := range books {
+    for i, v := range(books) {
         upper[i] = strings.Upper(books[i])
     }
     
     // initiate lower
-    for i, v := range books {
+    for i, v := range(books) {
         lower[i] = strings.Lower(books[i])
     }
     
