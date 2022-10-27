@@ -41,13 +41,14 @@ func main() {
 	switch mood {
 	case "positive":
 		emotion := positive
-		n := rand.Intn(len(moods))
 	case "negative":
 		emotion := negative
 	default:
 		fmt.Printf("There's no %q feeling in this.\n", mood)
+		fmt.Println("[your name] [positive|negative]")
 		return
 	}
+	
 	n := rand.Intn(len(moods[emotion]))
 	fmt.Printf("%s feels %s\n", name, moods[emotion][n])
 }
