@@ -7,7 +7,7 @@ import (
 
 func main() {
 	week := [...]string{"Monday", "Tuesday"}
-	wend := [4]string{"Saturday", "Sunday"}
+	wend := [...]string{"Saturday", "Sunday"}
 
 	fmt.Println(week != wend)
 
@@ -18,8 +18,8 @@ func main() {
 
 	// Use     : uint8 for one of the arrays instead of byte here.
 	// Remember: Aliased types are the same types.
-	image := [5]byte{'h', 'i'}
-	var data [5]uint{'h', 'i'}
+	image := [5]uint8{'h', 'i'}
+	var data [5]byte
 
 	fmt.Println(data == image)
 }
